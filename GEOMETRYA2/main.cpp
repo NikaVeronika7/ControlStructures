@@ -5,12 +5,25 @@ void main()
 	setlocale(LC_ALL, " ");
 
 	int n;
-	cout << "счетчик:"; cin >> n;
 
-	for (int i = 0; i < n; i++)
+	cout << "¬ведите размер доски:"; cin >> n;
+
+	for (int i = 0; i < n*n; i++)
 	{
-		for (int j = 0; j < n; j++)
-
+		for (int j = 0; j < n * n; j++)
+		{
+			cout << (i/n%2==j/n%2?"*":" ");
+		}
+		cout << endl;
 	}
 
+	/*cout << "введите размер доски:"; cin >> n;
+	for (int i = 0; i < n * n; i++)
+		for (int j = 0; j < n * n; j++)
+		{
+			{
+				cout << i / n & 1 ^ j / n & 1 ? " " : "*";
+			}
+		}
+	cout << endl;*/
 }
